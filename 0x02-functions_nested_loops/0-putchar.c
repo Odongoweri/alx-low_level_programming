@@ -1,8 +1,10 @@
-include "putchar.h"[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D#[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[
+#include "stdio.h"
+
 /**
-*main - Print "putchar" followed by a new line
+* main - Print "putchar" followed by a new line
 * Return: 0
 */
+
 int main (void)
 {
 char name[] = "_putchar";
