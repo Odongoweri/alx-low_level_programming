@@ -1,4 +1,4 @@
-include "putchar.h"[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D#[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[
+include "main.h"
 /**
 *main - Print "putchar" followed by a new line
 * Return: 0
