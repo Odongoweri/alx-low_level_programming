@@ -1,8 +1,10 @@
 #include "main.h"
+
 /**
 * main - Print "putchar" followed by a new line
 * Return: 0
 */
+
 int main (void)
 {
 char name[] = "_putchar";
