@@ -1,4 +1,5 @@
-#include "alx.h"
+#ifndef main.h
+#define "main.h"
 
 /**
 * main - Print "putchar" followed by a new line
