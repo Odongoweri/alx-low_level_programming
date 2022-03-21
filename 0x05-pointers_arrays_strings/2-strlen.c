@@ -5,12 +5,12 @@
  * Return: Length.
  */
 
-int _strlen(char *s)
+size_t _strlen(const char *str)
 {
-	int c;
+	size_t length = 0;
 
-	for (c = 0; (*s++ != 0);)
-		c++;
+	while (*str++)
+		length++;
 
-	return (c);
+	return (length);
 }
