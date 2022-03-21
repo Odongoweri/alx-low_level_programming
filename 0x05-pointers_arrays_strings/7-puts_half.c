@@ -1,4 +1,4 @@
-#include "main"[D.h"
+#include "main.h"
 /**
  * puts_half - Print half of a string
  * @str: Pointer to string
