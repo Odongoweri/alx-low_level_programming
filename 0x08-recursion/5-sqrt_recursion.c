@@ -1,31 +1,39 @@
 #include "main.h"
 /**
- * is_prime - Identify if a number is prime or not.
- * @n: Number.
- * @i: Multiple.
- * Return: 0 if the number is not prime and 1 if it is.
+ * _sqrt_nat - Calculate the natural square root of a number
+ * @n: Number raw.
+ * @r: Result.
+ * Return: Result.
  */
-int is_prime(int n, int i)
+int _sqrt_nat(int n, int r)
 {
-	if (n % i == 0)
+	if (n < 0)
+		return (-1);
+
+	if (n == 0)
 		return (0);
 
-	if (i >= n / 2)
+	if (n == 1)
 		return (1);
-	else
-		return (is_prime(n, i + 1));
-	return (1);
+
+	if (r > n / 2)
+		return (-1);
+
+	if (n != r * r)
+		return (_sqrt_nat(n, r + 1));
+
+	if (n == r * r)
+		return (r);
+
+	return (-1);
 }
 
 /**
- * is_prime_number - Identify if a number is prime or not.
+ * _sqrt_recursion - Calculate the natural square root of a number
  * @n: Number.
- * Return: 0 if the number is not prime and 1 if it is.
+ * Return: Result.
  */
-int is_prime_number(int n)
+int _sqrt_recursion(int n)
 {
-	if (n <= 1)
-		return (0);
-	else
-		return (is_prime(n, 2));
+	return (_sqrt_nat(n, 0));
 }
