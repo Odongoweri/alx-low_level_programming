@@ -1,54 +1,46 @@
-include "main.h"
+#include "main.h"
 /**
- * _strlen_rec - Return the length of a string
- * @s: String
- * Return: Lengt
+ * _strlen - return length of string
+ * @str: string to check
+ *
+ * Return: length of str
  */
-int _strlen_rec(char *s)
+int _strlen(char *str)
 {
-	int size;
-
-	if (*s != '\0')
-	{
-		size = _strlen_rec(s + 1);
-		return (size + 1);
-	}
-	else
-	{
+	if (*str == '\0')
 		return (0);
-	}
+	else
+		return (1 + _strlen(str + 1));
 }
 
 /**
- * compare - Compare a string and its reverse.
- * @s: String.
- * @u: Reverse string.
- * Return: 1 if the strings are the same and 0 if not.
+ * check_palindrome - checks to see if a string is a palindrome
+ * @l: left hand index
+ * @r: right hand index
+ * @p: possible palindrome
+ *
+ * Return: 1 if palindrome 0 if not
  */
-int compare(char *s, char *u)
+int check_palindrome(int l, int r, char *p)
 {
-	if (*s == '\0')
+	if (l >= r)
 		return (1);
-
-	if (*s == *u)
-		return (compare(s + 1, u - 1));
-	else
+	else if (p[l] != p[r])
 		return (0);
+	else
+		return (check_palindrome(l + 1, r - 1, p));
 }
 
 /**
- * is_palindrome - Identify if a string is a palindrome.
- * @s: String.
- * Return: 1 if a string is a palindrome and 0 if not.
+ * is_palindrome - states if a string is a palindrome
+ * @s: string to check
+ *
+ * Return: 1 if palindrome, 0 if not
  */
 int is_palindrome(char *s)
 {
-	int size;
-	char *u = 0;
+	int i;
 
-	size = _strlen_rec(s);
-
-	u = s + size - 1;
-
-	return (compare(s, u));
+	i = _strlen(s) - 1;
+	return (check_palindrome(0, i, s));
 }
