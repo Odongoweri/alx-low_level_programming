@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
- * *_memset - fills memory with a constant byte.
- * @s: pointer to put the constant
- * @b: constant
- * @n: max bytes to use
- * Return: s
+ * _calloc - Allocates memory for an array, using malloc, and
+ * the memory is set to zero
+ * @nmemb: Number of elements.
+ * @size: Size of each element.
+ * Return: A pointer to the allocated memory.
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
