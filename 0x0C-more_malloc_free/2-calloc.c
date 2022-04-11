@@ -9,31 +9,23 @@
  * Return: s
  */
 
-char *_memset(char *s, char b, unsigned int n)
-{
-	char *ptr = s;
-
-	while (n--)
-		*s++ = b;
-	return (ptr);
-}
-
-/**
- * *_calloc - allocates memory for an array, using malloc
- * @nmemb: array length
- * @size: size of each element
- * Return: pointer
- */
-
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *m;
+	char *arrlloc = NULL;
+	unsigned int i;
 
-	if (size == 0 || nmemb == 0)
+	if (nmemb == 0 || size == 0)
 		return (NULL);
-	m = malloc(sizeof(int) * nmemb);
-	if (m == 0)
+
+	/*Allocate memory*/
+	arrlloc = malloc(nmemb * size);
+
+	if (arrlloc == NULL)
 		return (NULL);
-	_memset(m, 0, nmemb * sizeof(int));
-	return (m);
+
+	/*Incialize array with 0*/
+	for (i = 0; i < nmemb * size; i++)
+		arrlloc[i] = 0;
+
+	return (arrlloc);
 }
