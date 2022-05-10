@@ -7,7 +7,7 @@
  *
  * Return: The number of mine
 **/
-size_t listint_len(const listint_t *h)
+int size_t listint_len(const listint_t *h)
 {
 	unsigned int m = 0;
 
