@@ -5,11 +5,10 @@
 *
 * Return: return 1 if little endian and 0 for big endian.
 **/
-
 int get_endianness(void)	
 {
 	int x = 1;
 	char *c = (char *) &x;
 	return (*c);
+	
 }
-
