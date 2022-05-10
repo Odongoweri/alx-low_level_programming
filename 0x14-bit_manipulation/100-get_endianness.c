@@ -7,8 +7,10 @@
 **/
 int get_endianness(void)
 {
-	int x = 1;
+	unsigned int x = 1;
 	char *c = (char *) &x;
-	
-	return (*c);
+
+	/*(*char) &x is used to "separate" the bytes and make*/
+	/*the pointer point to the first.*/
+	return ((int)*c);
 }
