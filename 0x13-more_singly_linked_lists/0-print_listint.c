@@ -8,7 +8,7 @@
  * Return: The number of mine
 **/
 
-size_t print_listint(const listint_t *h)
+int size_t print_listint(const listint_t *h)
 {
 	size_t n_nodes = 0;/*Counter of nodes*/
 
